@@ -9,14 +9,6 @@
 #include <stack>
 using namespace std;
 
-
-/* 
- * Acuatlly, everything I've already implemented in "Basic Calculator"(RPN way and Design pattern way).
- * So, here, I just use the quick-dirty way - just like the "two stacks solution" in "Basic Calulator".
- */
-
-
-//Quick & Dirty Solution
 bool isOperator(const char ch) {
     return (ch=='+' || ch=='-' || ch=='*' || ch=='/');
 }
@@ -47,8 +39,8 @@ long long calculate_exp(long long x, long long y, char op) {
 int calculate_two_stacks(string& s) {
 
     s += "+0";
-    stack<long long> num_stack; //put the number
-    stack<char> op_stack; //put the operations
+    stack<long long> num_stack; //give the number
+    stack<char> op_stack; //give the operations
 
     #define CALCULATE_IT { \
         long long y = num_stack.top(); num_stack.pop(); \
